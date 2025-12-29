@@ -39,7 +39,6 @@ nav {
 
 nav ul {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.5rem;
   list-style: none;
 }
@@ -93,37 +92,48 @@ nav ul li button:hover {
   transform: scale(1.05);
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/* ========== MOBILE IMPROVEMENTS ========== */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 1.5rem;
+    align-items: center;
+    padding: 0.8rem 1rem;
   }
 
+  /* Smaller, cleaner logo */
   .header-logo img {
-    height: 60px;
+    height: 52px;
+    margin-bottom: 0.6rem;
   }
 
   nav {
     width: 100%;
-    margin-top: 1rem;
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
   nav ul li {
-    width: 100%;
+    flex: 0 0 auto;
   }
 
-  nav ul li a,
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.7rem;
+  }
+
   nav ul li button {
-    width: 100%;
-    text-align: left;
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+
+  /* Remove underline animation on mobile (cleaner) */
+  nav ul li a::after {
+    display: none;
   }
 }
