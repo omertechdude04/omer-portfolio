@@ -3,7 +3,7 @@ import AstroBackground from "../components/AstroBackground";
 import Typewriter from "../components/Typewriter";
 
 // ✅ Put your image at: src/assets/me.jpg
-import me from "../assets/omer4.png";
+import me from "../assets/omer5.png";
 
 export default function Hero() {
   return (
